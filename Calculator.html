@@ -7,12 +7,19 @@
 	<meta name="description" content="Basic Calculator">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+		@font-face {
+			font-family: 'Digital';
+			src: url('digital.ttf');
+		}
 		body {
 	    	font-size: 64px;
 	    	background-color: white;
 	    	height: auto;
+			font-family: 'Quicksand';
 		}
 		.container {
+			font-family: 'Quicksand';
 		  margin-top: 50px;
 		  display: grid;
 		  justify-content: center;
@@ -37,8 +44,16 @@
 		  margin-bottom: 10px;
 		  height: auto;
 		  box-shadow: 0px 0px 5px 0px #444444;
+		  font-size: 25px;
+		  font-family: 'Digital';
+		  font-weight: 500;
+		  resize: none;
+		}
+		#item-input::-webkit-scrollbar {
+			display: none;
 		}
 		.btn {
+		  font-family: 'Quicksand';
 		  background-color: dimgray;
 		  border: none;
 		  color: white;
@@ -47,6 +62,7 @@
 		  margin: 4px 2px;
 		  border-radius: 50%;
 		  box-shadow: 0px 4px 4px 2px #444444;
+		  font-weight: 500;
 		}
 		.silver {
 		  background-color: silver;
@@ -62,16 +78,17 @@
 		}
 		input {
 		  font-size: 26px;
+		  font-family: 'Quicksand';
 		}
 	</style>
 	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 </head>
 <body>
 	<div class="container">
-  <textarea id="item-input" ></textarea>
+  <textarea id="item-input" disabled></textarea>
   
-  <input type='button' id="clean" class="btn silver" value="CE" onclick="clean();">
-  <input type='button' id="backspace" class="btn silver" value="C" onclick="backspace();">
+  <input type='button' id="clean" class="btn silver" value="C" onclick="clean();">
+  <input type='button' id="backspace" class="btn silver" value="CE" onclick="backspace();">
   <input type='button' class="btn silver" value="√    " onclick="squareroot();">
   <input type='button' class="btn silver" value="y*" onclick="power();">
   <input type='button' class="btn orange" value="÷" onclick="divide();">
